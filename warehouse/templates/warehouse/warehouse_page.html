@@ -1,0 +1,226 @@
+<html>
+
+<head>
+    <title>ГПС Denford</title>
+    <style>
+        .btn-group-vertical>button {
+            margin-bottom: 5px;
+            border-radius: 5px !important;
+        }
+
+        .mrg-bottom {
+            margin-bottom: 0px;
+        }
+
+        .mrg-top {
+            margin-top: 10px;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap" />
+                </svg>
+                <span class="fs-4">ГПС Denford</span>
+            </a>
+
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="/" class="nav-link" aria-current="page">Визуальный контроль</a></li>
+                <li class="nav-item"><a href="/conveyor/" class="nav-link">Конвейер</a></li>
+                <li class="nav-item"><a href="/warehouse/" class="nav-link">Склад</a></li>
+                <li class="nav-item"><a href="/lathe_machine/" class="nav-link">Токарный станок</a></li>
+                <li class="nav-item"><a href="/milling_machine/" class="nav-link">Фрезерный станок</a></li>
+            </ul>
+        </header>
+    </div>
+
+
+
+
+
+
+    <div class="container mt-5 border p-4 bg-light shadow">
+        <h3 class="text-center">Склад</h3>
+        <hr>
+
+
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+            <div class="col">
+                <div class="d-grid gap-2">
+                    <div class="btn-group btn-group-vertical" role="group">
+                        <button type="button" class="btn btn-success">Включить сервоприводы</button>
+                        <button type="button" class="btn btn-success">Начальное положение</button>
+                        <button type="button" class="btn btn-success btn-block">Установить соединение с
+                            Yandex.Cloud</button>
+                        <button type="button" class="btn btn-success btn-block">Разорвать соединение с
+                            Yandex.Cloud</button>
+                    </div>
+                    <p class="mrg-top" align="left">
+                        Соединение:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Установлено</p>
+                    <p class="mrg-top" align="left">
+                        Получено:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;column
+                        1 row 1 id</p>
+                </div>
+
+            </div>
+            <div class="col">
+                <div class="form-group row">
+                    <div class="col-sm-4">
+                        <label class="col-sm-3 col-form-label">Конвейер</label>
+                    </div>
+                    <div class="col-sm-8">
+                        <select class="form-select" id="state" required="">
+                            <option value="">С конвейера</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row my-3">
+                    <div class="col-sm-4">
+                    </div>
+                    <div class="col-sm-4">
+                        Столбец
+                    </div>
+                    <div class="col-sm-4">
+                        Ряд
+                    </div>
+                </div>
+                <div class="form-group row my-3">
+                    <div class="col-sm-4">
+                        От
+                    </div>
+                    <div class="col-sm-4">
+                        <select class="form-select" id="state" required="" disabled>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="col-sm-4">
+                        <select class="form-select" id="state" required="" disabled>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row my-3">
+                    <div class="col-sm-4">
+                        К
+                    </div>
+                    <div class="col-sm-4">
+                        <select class="form-select" id="state" required="" disabled>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="col-sm-4">
+                        <select class="form-select" id="state" required="" disabled>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row my-3">
+                    <div class="col-sm-4">
+                        Стеллаж
+                    </div>
+                    <div class="col-sm-8">
+                        <select class="form-select" id="state" required="" disabled>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="d-grid gap-2">
+                        <div class="col-sm-12" align="center">
+                            Состояние сервоприводов: ВКЛ
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group row">
+                    <div class="d-grid gap-2">
+                        <div class="btn-group btn-group-vertical" role="group">
+                            <button type="button" class="btn btn-success">Движение</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-grid gap-2">
+                            <div class="btn-group btn-group-vertical" role="group">
+                                <button type="button" class="btn btn-success">X+</button>
+                                <button type="button" class="btn btn-success">Y+</button>
+                                <button type="button" class="btn btn-success">Z+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-grid gap-2">
+                            <div class="btn-group btn-group-vertical" role="group">
+                                <button type="button" class="btn btn-success">X-</button>
+                                <button type="button" class="btn btn-success">Y-</button>
+                                <button type="button" class="btn btn-success">Z-</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="d-grid gap-2">
+                        <div class="col-sm-12" align="left">
+                            <p class="mrg-bottom mrg-top" align="left">Текущие координаты:</p>
+                            <p class="mrg-bottom" align="left">X: -148989</p>
+                            <p class="mrg-bottom" align="left">Y: -88181</p>
+                            <p class="mrg-bottom" align="left">X: -26387</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-12 mb-3 text-center">
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-auto">
+                        <label for="inputPassword6"
+                            class="col-form-label">Отправлено:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    </div>
+                    <div class="col-auto">
+                        <input class="form-control" value="column 1 row 1 id">
+                    </div>
+                    <div class="col-auto">
+                        <button type="button" class="mx-4 btn btn-success">Отправить</button>
+                    </div>
+                </div>
+                <div class="row my-3">
+                    <div class="col-auto my-2">
+                        <label>Set speed</label>
+                    </div>
+                    <div class="col-auto">
+                        <label for="inputPassword6" class="col-form-label">Ось:</label>
+                    </div>
+                    <div class="col-auto">
+                        <select class="form-select" id="state" required="" disabled>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="col-auto">
+                        <label for="inputPassword6" class="col-form-label">Значение:</label>
+                    </div>
+                    <div class="col-auto">
+                        <select class="form-select" id="state" required="" disabled>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-success">Скорость</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 my-4">
+                <div class="d-grid gap-2">
+                    <button type="button" class="btn btn-danger">СТОП</button>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

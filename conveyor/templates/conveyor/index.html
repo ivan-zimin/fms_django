@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ГПС Denford</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <style>
+    input[type=text] {
+      padding: 5px;
+      border: 2px solid #ccc;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+    }
+
+    input[type=text]:focus {
+      border-color: #ffffff;
+    }
+
+    input[type=submit] {
+      padding: 5px 15px;
+      background: #198754;
+      border: 0 none;
+      color: #ffffff;
+      cursor: pointer;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32">
+          <use xlink:href="#bootstrap" />
+        </svg>
+        <span class="fs-4">ГПС Denford</span>
+      </a>
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="/" class="nav-link" aria-current="page">Визуальный контроль</a></li>
+        <li class="nav-item"><a href="/conveyor/" class="nav-link">Конвейер</a></li>
+        <li class="nav-item"><a href="/warehouse/" class="nav-link">Склад</a></li>
+        <li class="nav-item"><a href="/lathe_machine/" class="nav-link">Токарный станок</a></li>
+        <li class="nav-item"><a href="/milling_machine/" class="nav-link">Фрезерный станок</a></li>
+      </ul>
+    </header>
+  </div>
+
+  <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+  <form action="https://functions.yandexcloud.net/d4e93j880t2mjk71j5ns" target="dummyframe" method="get">
+    <div class="container mt-5 border p-4 bg-light shadow">
+      <h3 class="text-center">Конвейер</h3>
+      <hr>
+      <i>Для датчиков: "1" - заготовка находится вблизи датчика, "0" - заготовка не рядом с датчиком</i>
+      <br>
+      <i>Для замков: "1" - замок замкнут, "0" - замок разомкнут</i>
+      <br>
+      <i>Для ленты: "1" - лента движется, "0" - лента не движется</i>
+      <hr>
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <div class="signup-form">
+            <form>
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="form-group row mb-3">
+                    <label for="sensor_0" class="col-sm-9 col-form-label"><b>Датчик 0:</b></label>
+                    <div class="col-sm-3">
+                      <p class="form-control-plaintext">{{ sensor_0 }}</p>
+                    </div>
+                  </div>
+                  <div class="form-group row mb-3">
+                    <label for="sensor_1" class="col-sm-9 col-form-label"><b>Датчик 1:</b></label>
+                    <div class="col-sm-3">
+                      <p class="form-control-plaintext">{{ sensor_1 }}</p>
+                    </div>
+                  </div>
+                  <div class="form-group row mb-3">
+                    <label for="sensor_2" class="col-sm-9 col-form-label"><b>Датчик 2:</b></label>
+                    <div class="col-sm-3">
+                      <p class="form-control-plaintext">{{ sensor_2 }}</p>
+                    </div>
+                  </div>
+                  <div class="form-group row mb-3">
+                    <label for="sensor_3" class="col-sm-9 col-form-label"><b>Датчик 3:</b></label>
+                    <div class="col-sm-3">
+                      <p class="form-control-plaintext">{{ sensor_3 }}</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-8">
+                  {% load static %} <center><img src="{% static " conveyor/media/fms.png" %}" width="70%" vspace="10">
+                  </center>
+                </div>
+              </div>
+
+              <div class="form-group row mb-3">
+                <label for="lock_0" class="col-sm-3 col-form-label"><b>Замок 0:</b></label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="lock_0" name="lock_0" placeholder="{{ lock_0 }}"
+                    value="{{ lock_0 }}">
+            </form>
+          </div>
+        </div>
+        <div class="form-group row mb-3">
+          <label for="lock_1" class="col-sm-3 col-form-label"><b>Замок 1:</b></label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="lock_1" name="lock_1" placeholder="{{ lock_1 }}"
+              value="{{ lock_1 }}">
+          </div>
+        </div>
+        <div class="form-group row mb-3">
+          <label for="lock_2" class="col-sm-3 col-form-label"><b>Замок 2:</b></label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="lock_2" name="lock_2" placeholder="{{ lock_2 }}"
+              value="{{ lock_2 }}">
+          </div>
+        </div>
+        <div class="form-group row mb-3">
+          <label for="lock_3" class="col-sm-3 col-form-label"><b>Замок 3:</b></label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="lock_3" name="lock_3" placeholder="{{ lock_3 }}"
+              value="{{ lock_3 }}">
+          </div>
+        </div>
+        <div class="form-group row mb-3">
+          <label for="belt" class="col-sm-3 col-form-label"><b>Лента:</b></label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="belt" name="belt" placeholder="{{ belt }}" value="{{ belt }}">
+          </div>
+        </div>
+        <input class="" type="submit" value="Отправить данные на сервер" onClick="window.location.reload();">
+  </form>
+  </div>
+  </div>
+  </div>
+  </div>
+  </form>
+</body>
+
+</html>
