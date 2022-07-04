@@ -1,5 +1,5 @@
 # fms_django
-This web application is developed to control a flexible manufacturing system (FMS Denford) which is located in my univerity.
+This web application is developed to control a flexible manufacturing system (FMS Denford) which is located in my university.
 
 The application was developed with Python and Django framework. Interface was designed with Bootstrap.
 
